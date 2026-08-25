@@ -1,0 +1,22 @@
+2026-08-25 23:07:05,913 - INFO - ===== SALES ANALYSIS STARTED =====
+2026-08-25 23:07:05,913 - INFO - Starting sales data loading.
+2026-08-25 23:07:05,918 - INFO - Sales data loaded successfully. Rows: 24, Columns: 5
+2026-08-25 23:07:05,918 - INFO - Starting data preparation.
+2026-08-25 23:07:05,923 - INFO - Data preparation completed successfully.
+2026-08-25 23:07:05,924 - INFO - Starting sales analysis.
+2026-08-25 23:07:05,927 - INFO - Sales analysis completed successfully.
+2026-08-25 23:07:05,927 - INFO - Total revenue: 2534500.00
+2026-08-25 23:07:05,927 - INFO - Best-selling product: Laptop
+2026-08-25 23:07:05,928 - INFO - Sales analysis completed successfully.
+2026-08-25 23:07:05,928 - INFO - ===== SALES ANALYSIS FINISHED =====
+2026-08-25 23:07:36,666 - INFO - ===== SALES ANALYSIS STARTED =====
+2026-08-25 23:07:36,667 - INFO - Starting sales data loading.
+2026-08-25 23:07:36,672 - INFO - Sales data loaded successfully. Rows: 24, Columns: 5
+2026-08-25 23:07:36,672 - INFO - Starting data preparation.
+2026-08-25 23:07:36,678 - INFO - Data preparation completed successfully.
+2026-08-25 23:07:36,678 - INFO - Starting sales analysis.
+2026-08-25 23:07:36,681 - INFO - Sales analysis completed successfully.
+2026-08-25 23:07:36,681 - INFO - Total revenue: 2534500.00
+2026-08-25 23:07:36,681 - INFO - Best-selling product: Laptop
+2026-08-25 23:07:36,682 - INFO - Sales analysis completed successfully.
+2026-08-25 23:07:36,682 - INFO - ===== SALES ANALYSIS FINISHED =====
