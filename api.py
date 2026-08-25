@@ -1,11 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 import pandas as pd
+import os
 
-
-# =========================================================
 # CREATE FASTAPI APPLICATION
-# =========================================================
-
 app = FastAPI(
     title="Sales Analysis API",
     description="API for retrieving and analyzing sales data",
@@ -13,27 +10,99 @@ app = FastAPI(
 )
 
 
-# =========================================================
-# LOAD SALES DATA
-# =========================================================
+# ==========================================
+# LOAD AND VALIDATE SALES DATA
+# ==========================================
 
-df = pd.read_csv("data/sales_data.csv")
+FILE_PATH = "data/sales_data.csv"
+
+try:
+    df = pd.read_csv(FILE_PATH)
+
+except FileNotFoundError:
+    raise HTTPException(
+        status_code=404,
+        detail="Sales data file not found.Please ensure the file exists."
+    )
+
+except Exception as e:
+    print(f"Error loading sales data: {e}")
+    df = pd.DataFrame()
 
 
-# =========================================================
-# DATA PROCESSING
-# =========================================================
+# ==========================================
+# DATA VALIDATION AND CLEANING
+# ==========================================
 
-# Convert Date column to date format
-df["Date"] = pd.to_datetime(df["Date"])
+if not df.empty:
 
-# Calculate Total Sales
-df["Total_Sales"] = df["Quantity"] * df["Price"]
+    required_columns = [
+        "Date",
+        "Product",
+        "Category",
+        "Quantity",
+        "Price"
+    ]
+
+    missing_columns = [
+        column for column in required_columns
+        if column not in df.columns
+    ]
+
+    if missing_columns:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Missing required columns: {missing_columns}"
+        )
+
+    # Convert Date
+    df["Date"] = pd.to_datetime(
+        df["Date"],
+        errors="coerce"
+    )
+
+    # Convert numeric columns
+    df["Quantity"] = pd.to_numeric(
+        df["Quantity"],
+        errors="coerce"
+    )
+
+    df["Price"] = pd.to_numeric(
+        df["Price"],
+        errors="coerce"
+    )
+
+    # Remove duplicates
+    df = df.drop_duplicates()
+
+    # Remove invalid/missing values
+    df = df.dropna(
+        subset=[
+            "Date",
+            "Product",
+            "Category",
+            "Quantity",
+            "Price"
+        ]
+    )
 
 
-# =========================================================
-# HOME ENDPOINT
-# =========================================================
+# ==========================================
+# CALCULATE TOTAL SALES
+# ==========================================
+
+if not df.empty:
+    df["Total_Sales"] = df["Quantity"] * df["Price"]
+
+
+# ==========================================
+# CREATE YEAR AND MONTH COLUMNS
+# ==========================================
+
+if not df.empty:
+    df["Year"] = df["Date"].dt.year
+    df["Month"] = df["Date"].dt.to_period("M")
+
 
 @app.get("/")
 def home():
