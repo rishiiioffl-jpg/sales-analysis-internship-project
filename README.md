@@ -599,8 +599,14 @@ Through this project, the following skills were practiced:
 - Git and GitHub
 - Cloud deployment
 - Project documentation
-
 ---
+
+## 🤝 Contribution
+
+This project was developed as part of an internship project.
+The code is organized into separate modules for data processing,
+analysis, API functionality, visualization, and dashboard development.
+
 
 ## 📌 Future Improvements
 
