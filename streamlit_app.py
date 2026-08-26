@@ -418,3 +418,6 @@ st.caption(
     "E-Commerce Sales Analysis Project • "
     "Built with Python, Pandas, FastAPI & Streamlit"
 )
+
+st.markdown("---")
+st.caption("E-Commerce Sales Analysis | Built with Python, FastAPI and Streamlit")
