@@ -608,6 +608,12 @@ The code is organized into separate modules for data processing,
 analysis, API functionality, visualization, and dashboard development.
 
 
+## ⚠️ Limitations
+
+- Analysis depends on the quality of the input sales dataset.
+- Forecasting results are based on historical sales patterns.
+- The dashboard currently focuses on the provided sales dataset.
+
 ## 📌 Future Improvements
 
 Possible future improvements include:
