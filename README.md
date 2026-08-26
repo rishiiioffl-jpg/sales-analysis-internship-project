@@ -415,6 +415,14 @@ The logging system helps with:
 - Debugging
 - Monitoring analysis operations
 
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/rishiiioffl-jpg/sales-analysis-internship-project.git
+cd sales-analysis-internship-project
+
 ---
 
 ## 💻 Running the Project Locally
