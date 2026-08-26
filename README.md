@@ -269,6 +269,20 @@ The processed data is grouped and analyzed by:
 
 Sales results are presented through charts and the Streamlit dashboard.
 
+## 🖼️ Dashboard Screenshots
+
+### Sales Trend
+![alt text](image.png)
+
+
+### Product-wise Sales
+
+![Product Sales](product_sales_ui.png)
+
+### Category Sales
+
+![Category Sales](category_sales_ui.png)
+
 ### 6. API Integration
 
 The processed data and analysis results are exposed through FastAPI endpoints.
