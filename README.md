@@ -31,6 +31,12 @@ The project provides a FastAPI backend with the following endpoints:
 | `/sales/monthly` | Get monthly sales |
 | `/sales/summary` | Get complete sales summary |
 
+- `GET /` — API health/status check
+- `GET /sales` — Retrieve sales data
+- `GET /summary` — Retrieve overall sales summary
+- `GET /product-sales` — Retrieve product-wise sales
+- `GET /monthly-sales` — Retrieve monthly sales trends
+
 
 ## 🏗️ Project Architecture
 
