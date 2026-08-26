@@ -2,6 +2,11 @@ import streamlit as st
 import requests
 import pandas as pd
 
+st.set_page_config(
+    page_title="E-Commerce Sales Dashboard",
+    page_icon="📊",
+    layout="wide"
+)
 
 # ==========================================
 # CONFIGURATION
