@@ -31,6 +31,33 @@ The project provides a FastAPI backend with the following endpoints:
 | `/sales/monthly` | Get monthly sales |
 | `/sales/summary` | Get complete sales summary |
 
+
+## 🏗️ Project Architecture
+
+The project follows a simple data-analysis and API-driven dashboard architecture:
+
+```text
+Sales CSV Data
+      ↓
+Data Processing
+      ↓
+Sales Analysis
+      ↓
+FastAPI Backend
+      ↓
+Streamlit Dashboard
+      ↓
+Interactive Sales Insights
+
+Main Components
+Data Processing — Cleans and validates the sales dataset.
+Sales Analysis — Calculates revenue, quantities, product performance, and sales trends.
+FastAPI — Provides REST API endpoints for accessing sales analysis results.
+Streamlit — Provides the interactive frontend dashboard.
+Testing — Validates data processing and application functionality.
+Deployment — FastAPI backend is deployed in production and the Streamlit dashboard is hosted online.
+
+
 ### 🔗 FastAPI Backend
 
 [👉 Open the Sales Analysis API](https://sales-analysis-api-deef.onrender.com)
