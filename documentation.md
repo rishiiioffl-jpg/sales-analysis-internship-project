@@ -353,8 +353,27 @@ Possible future improvements include:
 
 ---
 
-## Documentation Status
+---
 
-This document records the current development progress of the project.
+## 20. Production Deployment
 
-A complete and polished README.md will be created after the remaining development tasks are completed.
+The Sales Analysis API was successfully deployed to a production environment using Render.
+
+### Deployment Platform
+
+Render
+
+### Production API
+
+https://sales-analysis-api-deef.onrender.com
+
+### API Documentation
+
+https://sales-analysis-api-deef.onrender.com/docs
+
+### Deployment Configuration
+
+Build Command:
+
+```text
+pip install -r requirements.txt
