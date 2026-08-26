@@ -10,6 +10,27 @@ ry the deployed E-commerce sales Dashboard
 
 [👉 Open the E-Commerce Sales Dashboard](  https://rishiiioffl-jpg-sales-analysis-internship--streamlit-app-qwtevq.streamlit.app/ )
 
+## 🔌 API Endpoints
+
+The project provides a FastAPI backend with the following endpoints:
+
+| Endpoint | Description |
+|---|---|
+| `/` | Check API status |
+| `/sales` | Get all sales records |
+| `/sales/total` | Get total revenue |
+| `/sales/average` | Get average sale |
+| `/sales/highest` | Get highest sale |
+| `/sales/lowest` | Get lowest sale |
+| `/sales/quantity` | Get total quantity sold |
+| `/sales/products` | Get product-wise sales |
+| `/sales/categories` | Get category-wise sales |
+| `/sales/best-product` | Get best-selling product |
+| `/sales/best-day` | Get best sales day |
+| `/sales/daily` | Get daily sales |
+| `/sales/monthly` | Get monthly sales |
+| `/sales/summary` | Get complete sales summary |
+
 ### 🔗 FastAPI Backend
 
 [👉 Open the Sales Analysis API](https://sales-analysis-api-deef.onrender.com)
